@@ -131,46 +131,6 @@
             z-index: 30;
         }
 
-        /* Parallax Background Elements */
-        .parallax-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .bg-element-1 {
-            position: absolute;
-            top: -10%;
-            right: -10%;
-            width: 80%;
-            max-width: 1000px;
-            opacity: 0.4;
-            filter: blur(60px);
-            animation: float-bg 20s ease-in-out infinite;
-        }
-
-        .bg-element-2 {
-            position: absolute;
-            bottom: -10%;
-            left: -10%;
-            width: 70%;
-            max-width: 900px;
-            opacity: 0.3;
-            filter: blur(80px);
-            animation: float-bg 25s ease-in-out infinite reverse;
-        }
-
-        @keyframes float-bg {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(5%, 5%) rotate(5deg); }
-            66% { transform: translate(-5%, 2%) rotate(-3deg); }
-        }
-
         .slide-html {
             background-color: #1a1d2e;
             border: 1px solid rgba(255,255,255,0.1);
@@ -266,12 +226,6 @@
 </head>
 <body class="overflow-x-hidden bg-[#0d0f1a]">
 
-    <!-- Parallax Background Elements -->
-    <div class="parallax-bg">
-        <img src="assets/ellipse-bg.png" alt="" class="bg-element-1">
-        <img src="assets/group-bg.png" alt="" class="bg-element-2">
-    </div>
-
     <!-- Navbar -->
     <nav id="navbar" class="fixed top-0 left-1/2 -translate-x-1/2 z-50 bg-transparent px-6 py-4 md:px-12 border-b border-white/0 transition-all duration-300">
         <div class="max-w-[1512px] mx-auto flex justify-between items-center w-full">
@@ -297,21 +251,21 @@
                 <!-- Hero Stats -->
                 <div class="mt-8 w-full max-w-[720px] grid grid-cols-3 gap-8 text-center">
                     <div class="space-y-1 hero-stat transition-transform hover:scale-105 cursor-default">
-                        <p class="text-4xl font-medium text-white tracking-tighter uppercase">+4</p>
+                        <p class="text-4xl font-medium text-white tracking-tighter uppercase">+3</p>
                         <p class="text-[10px] md:text-xs font-medium text-white/40 uppercase tracking-widest leading-tight">
-                            Años de<br>experiencia
+                            proyectos<br>diseñados
                         </p>
                     </div>
                     <div class="space-y-1 hero-stat transition-transform hover:scale-105 cursor-default">
-                        <p class="text-4xl font-medium text-white tracking-tighter uppercase">+20</p>
+                        <p class="text-4xl font-medium text-white tracking-tighter uppercase">2</p>
                         <p class="text-[10px] md:text-xs font-medium text-white/40 uppercase tracking-widest leading-tight">
-                            Proyectos<br>completados
+                            app<br>publicadas
                         </p>
                     </div>
                     <div class="space-y-1 hero-stat transition-transform hover:scale-105 cursor-default">
-                        <p class="text-4xl font-medium text-white tracking-tighter uppercase">+15</p>
+                        <p class="text-4xl font-medium text-white tracking-tighter uppercase">+100</p>
                         <p class="text-[10px] md:text-xs font-medium text-white/40 uppercase tracking-widest leading-tight">
-                            Clientes<br>satisfechos
+                            mas de<br>pantallas publicadas
                         </p>
                     </div>
                 </div>
@@ -490,40 +444,34 @@
                     <p class="text-xl text-white/60 max-w-md font-normal leading-relaxed">
                         Estoy disponible para nuevos desafíos y colaboraciones. Hablemos sobre cómo puedo ayudarte a potenciar tu producto.
                     </p>
-                    
-                    <div class="flex items-center gap-6 pt-8">
-                        <a href="#" class="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300">
-                            <i data-lucide="mail" class="w-6 h-6"></i>
-                        </a>
-                        <a href="#" class="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300">
-                            <i data-lucide="linkedin" class="w-6 h-6"></i>
-                        </a>
-                        <a href="#" class="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300">
-                            <i data-lucide="instagram" class="w-6 h-6"></i>
-                        </a>
-                        <a href="#" class="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300">
-                            <i data-lucide="dribbble" class="w-6 h-6"></i>
-                        </a>
-                    </div>
                 </div>
 
-                <form class="space-y-8 bg-white/5 p-10 md:p-12 rounded-[40px] border border-white/5">
-                    <div class="space-y-2">
-                        <label for="name" class="text-xs font-medium uppercase tracking-widest text-white/40">Nombre completo</label>
-                        <input type="text" id="name" name="name" required placeholder="Tu nombre" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-accent outline-none transition-colors text-lg font-normal">
+                <div class="space-y-8 bg-white/5 p-10 md:p-12 rounded-[40px] border border-white/5 flex flex-col justify-center">
+                    <div class="space-y-6">
+                        <h4 class="text-2xl font-medium text-white uppercase tracking-tight">Hablemos directamente</h4>
+                        <div class="space-y-8">
+                            <a href="mailto:pabloeliasn.n@gmail.com" class="flex items-center gap-6 text-white/60 hover:text-white transition-all duration-300 group">
+                                <div class="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent transition-all duration-300">
+                                    <i data-lucide="mail" class="w-8 h-8 group-hover:scale-110 transition-transform"></i>
+                                </div>
+                                <div class="space-y-1">
+                                    <p class="text-xs font-medium uppercase tracking-widest text-white/40">Email</p>
+                                    <p class="text-xl md:text-2xl font-normal">pabloeliasn.n@gmail.com</p>
+                                </div>
+                            </a>
+
+                            <a href="https://wa.me/5492996341746" target="_blank" class="flex items-center gap-6 text-white/60 hover:text-white transition-all duration-300 group">
+                                <div class="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent transition-all duration-300">
+                                    <i data-lucide="phone" class="w-8 h-8 group-hover:scale-110 transition-transform"></i>
+                                </div>
+                                <div class="space-y-1">
+                                    <p class="text-xs font-medium uppercase tracking-widest text-white/40">Teléfono / WhatsApp</p>
+                                    <p class="text-xl md:text-2xl font-normal">+54 9 299 6341746</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="space-y-2">
-                        <label for="email" class="text-xs font-medium uppercase tracking-widest text-white/40">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="tu@email.com" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-accent outline-none transition-colors text-lg font-normal">
-                    </div>
-                    <div class="space-y-2">
-                        <label for="message" class="text-xs font-medium uppercase tracking-widest text-white/40">Mensaje</label>
-                        <textarea id="message" name="message" required rows="4" placeholder="Cuéntame sobre tu proyecto" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-accent outline-none transition-colors text-lg font-normal resize-none"></textarea>
-                    </div>
-                    <button type="submit" class="bg-accent text-white px-12 py-5 rounded-full text-sm font-medium hover:scale-105 transition shadow-lg w-full md:w-fit uppercase tracking-wider">
-                        Enviar Mensaje
-                    </button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
