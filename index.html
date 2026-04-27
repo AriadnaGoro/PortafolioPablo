@@ -131,6 +131,12 @@
             z-index: 30;
         }
 
+        @keyframes float-bg {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(5%, 5%) rotate(5deg); }
+            66% { transform: translate(-5%, 2%) rotate(-3deg); }
+        }
+
         .slide-html {
             background-color: #1a1d2e;
             border: 1px solid rgba(255,255,255,0.1);
@@ -144,6 +150,40 @@
         }
         .details-container.open {
             max-height: 10000px;
+        }
+
+        /* Parallax Background Elements */
+        .parallax-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-element-1 {
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 80%;
+            max-width: 1000px;
+            opacity: 0.4;
+            filter: blur(60px);
+            animation: float-bg 20s ease-in-out infinite;
+        }
+
+        .bg-element-2 {
+            position: absolute;
+            bottom: -10%;
+            left: -10%;
+            width: 70%;
+            max-width: 900px;
+            opacity: 0.3;
+            filter: blur(80px);
+            animation: float-bg 25s ease-in-out infinite reverse;
         }
 
         .skill-card {
@@ -226,6 +266,12 @@
 </head>
 <body class="overflow-x-hidden bg-[#0d0f1a]">
 
+    <!-- Parallax Background Elements -->
+    <div class="parallax-bg">
+        <img src="assets/ellipse-bg.png" alt="" class="bg-element-1">
+        <img src="assets/group-bg.png" alt="" class="bg-element-2">
+    </div>
+
     <!-- Navbar -->
     <nav id="navbar" class="fixed top-0 left-1/2 -translate-x-1/2 z-50 bg-transparent px-6 py-4 md:px-12 border-b border-white/0 transition-all duration-300">
         <div class="max-w-[1512px] mx-auto flex justify-between items-center w-full">
@@ -285,18 +331,18 @@
                 </div>
             </div>
 
-            <!-- Description Block (Shifted 48px left: calc(50%-48px)) -->
-            <div class="absolute top-[440px] left-[calc(50%+360px+32px-48px)] z-40 w-full max-w-[400px] flex flex-col items-start gap-6">
+            <!-- Description Block (Shifted 48px left, aligned buttons with stats) -->
+            <div class="absolute top-[510px] left-[calc(50%+360px+32px-48px)] z-40 w-full max-w-[400px] flex flex-col items-start gap-4">
                 <div class="space-y-0">
                     <h2 class="text-[40px] font-medium text-white uppercase leading-tight">HOLA,</h2>
                     <h2 class="text-[40px] font-medium text-white uppercase leading-tight">
                         SOY <span class="text-[#E50914]">PABLO ELIAS</span>
                     </h2>
                 </div>
-                <p class="text-white/70 text-base leading-relaxed text-left font-normal">
-                    Diseñador de experiencias y productos digitales orientados a usuarios y métricas. Especializado en aplicaciones móviles y web para el crecimiento de productos.
+                <p class="text-white/70 text-base leading-relaxed text-left font-normal mb-10">
+                    Interfaces claras, decisiones reales y productos que funcionan.
                 </p>
-                <div class="flex flex-col md:flex-row gap-4 w-full md:w-auto mt-4">
+                <div class="flex flex-col md:flex-row gap-4 w-full md:w-auto">
                     <a href="#proyectos" class="bg-[#E50914] text-white px-8 py-4 rounded-full text-sm font-medium hover:scale-105 transition shadow-lg flex items-center justify-center space-x-2">
                         <span>Ver Proyectos</span>
                     </a>
@@ -433,13 +479,47 @@
         </div>
     </section>
 
+    <!-- Sobre Mí Section -->
+    <section id="sobre-mi" class="py-32 px-6 relative z-10 overflow-hidden bg-[#0d0f1a]">
+        <!-- Background Hand Silhouette -->
+        <div class="absolute top-1/2 left-0 -translate-y-1/2 z-0 opacity-30 pointer-events-none">
+            <img src="assets/mano-bg.png" alt="" class="h-[800px] w-auto object-contain">
+        </div>
+
+        <div class="max-w-[1512px] mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="space-y-12">
+                    <div>
+                        <span class="bg-black/20 text-accent uppercase tracking-[0.3em] text-sm font-medium mb-6 inline-block px-6 py-2 rounded-full">sobre mí</span>
+                        <h2 class="text-7xl md:text-8xl font-medium uppercase tracking-tighter leading-tight text-gradient py-2">UN POCO DE MÍ</h2>
+                    </div>
+                    
+                    <div class="space-y-8 max-w-xl">
+                        <p class="text-xl text-white/80 font-normal leading-relaxed">
+                            Soy diseñador UI/UX con experiencia en el diseño de productos digitales, me especializo en diseño de interfaces con estructuras claras y limpias.
+                        </p>
+                        <p class="text-xl text-white/80 font-normal leading-relaxed">
+                            He trabajado en múltiples proyectos colaborando tanto en ejecución visual como en coordinación de equipos, participando en decisiones de producto y organización de funcionalidades.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative flex justify-end">
+                    <div class="relative z-10 w-full max-w-[600px] rounded-[40px] overflow-hidden shadow-2xl border border-white/5">
+                        <img src="assets/img-sobre-mi.png" alt="Pablo Elias" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contacto" class="py-32 px-6 bg-[#0a0c16]">
         <div class="max-w-[1512px] mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
                 <div class="space-y-12">
                     <h2 class="text-7xl md:text-8xl font-medium text-white uppercase tracking-tighter leading-none">
-                        <i data-lucide="send" class="w-10 h-10 text-accent inline-block mr-4 align-middle"></i>CONTACTO
+                        CONTACTO
                     </h2>
                     <p class="text-xl text-white/60 max-w-md font-normal leading-relaxed">
                         Estoy disponible para nuevos desafíos y colaboraciones. Hablemos sobre cómo puedo ayudarte a potenciar tu producto.

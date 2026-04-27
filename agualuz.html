@@ -22,46 +22,6 @@
         .bg-accent { background-color: #E50914; }
         .text-accent { color: #E50914; }
 
-        /* Parallax Background Elements */
-        .parallax-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .bg-element-1 {
-            position: absolute;
-            top: -10%;
-            right: -10%;
-            width: 80%;
-            max-width: 1000px;
-            opacity: 0.4;
-            filter: blur(60px);
-            animation: float-bg 20s ease-in-out infinite;
-        }
-
-        .bg-element-2 {
-            position: absolute;
-            bottom: -10%;
-            left: -10%;
-            width: 70%;
-            max-width: 900px;
-            opacity: 0.3;
-            filter: blur(80px);
-            animation: float-bg 25s ease-in-out infinite reverse;
-        }
-
-        @keyframes float-bg {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(5%, 5%) rotate(5deg); }
-            66% { transform: translate(-5%, 2%) rotate(-3deg); }
-        }
-
         /* Floating Navbar Style */
         #navbar {
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -106,12 +66,6 @@
     </style>
 </head>
 <body class="overflow-x-hidden bg-[#0d0f1a]">
-
-    <!-- Parallax Background Elements -->
-    <div class="parallax-bg">
-        <img src="assets/ellipse-bg.png" alt="" class="bg-element-1">
-        <img src="assets/group-bg.png" alt="" class="bg-element-2">
-    </div>
 
     <!-- Navbar -->
     <nav id="navbar" class="fixed top-0 left-1/2 -translate-x-1/2 z-50 bg-transparent px-6 py-4 md:px-12 border-b border-white/0 transition-all duration-300">
@@ -171,7 +125,7 @@
                         <h4 class="text-[56px] font-normal text-white uppercase tracking-tighter leading-tight">MI ROL</h4>
                         <p class="text-lg text-white/60 leading-relaxed font-normal">Lideré el diseño de UX/UI, definiendo la arquitectura del sistema, flujos principales y diseño de interfaz, trabajando en conjunto con desarrollo y el cliente durante las iteraciones.</p>
                     </div>
-                    <div class="md:w-1/2"><img src="assets/agualuz/screens.png" class="w-full rounded-3xl shadow-2xl"></div>
+                    <div class="md:w-1/2"><img src="assets/agualuz/mi-rol-full.png" class="w-full rounded-3xl shadow-2xl"></div>
                 </div>
 
                 <!-- ARQUITECTURA -->
@@ -259,44 +213,10 @@
                             </a>
                         </div>
 
-                        <button onclick="toggleModal(true)" class="bg-white text-black px-12 py-5 rounded-full text-sm font-medium hover:scale-105 transition shadow-lg uppercase tracking-wider flex items-center gap-3">
+                        <a href="index.html#contacto" class="bg-white text-black px-12 py-5 rounded-full text-sm font-medium hover:scale-105 transition shadow-lg uppercase tracking-wider flex items-center gap-3">
                             <i data-lucide="mail" class="w-5 h-5"></i>
-                            Contactar
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Modal de Contacto -->
-                <div id="contact-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-6 bg-black/90 backdrop-blur-md">
-                    <div class="relative w-full max-w-2xl bg-[#0d0f1a] rounded-[40px] border border-white/10 p-10 md:p-16 shadow-2xl overflow-y-auto max-h-[90vh]">
-                        <button onclick="toggleModal(false)" class="absolute top-8 right-8 text-white/40 hover:text-white transition-colors">
-                            <i data-lucide="x" class="w-8 h-8"></i>
-                        </button>
-                        
-                        <div class="space-y-12">
-                            <div class="space-y-4">
-                                <h2 class="text-5xl font-medium text-white uppercase tracking-tighter">Hablemos</h2>
-                                <p class="text-white/60 text-lg">Cuéntame sobre tu proyecto o simplemente saluda.</p>
-                            </div>
-
-                            <form class="space-y-8">
-                                <div class="space-y-2">
-                                    <label class="text-xs font-medium uppercase tracking-widest text-white/40">Nombre completo</label>
-                                    <input type="text" required placeholder="Tu nombre" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-accent outline-none transition-colors text-lg text-white">
-                                </div>
-                                <div class="space-y-2">
-                                    <label class="text-xs font-medium uppercase tracking-widest text-white/40">Email</label>
-                                    <input type="email" required placeholder="tu@email.com" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-accent outline-none transition-colors text-lg text-white">
-                                </div>
-                                <div class="space-y-2">
-                                    <label class="text-xs font-medium uppercase tracking-widest text-white/40">Mensaje</label>
-                                    <textarea required rows="4" placeholder="Cuéntame sobre tu proyecto" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-accent outline-none transition-colors text-lg text-white resize-none"></textarea>
-                                </div>
-                                <button type="submit" class="bg-accent text-white px-12 py-5 rounded-full text-sm font-medium hover:scale-105 transition shadow-lg w-full uppercase tracking-wider">
-                                    Enviar Mensaje
-                                </button>
-                            </form>
-                        </div>
+                            Hablemos
+                        </a>
                     </div>
                 </div>
 
@@ -311,6 +231,16 @@
         </div>
     </main>
 
+    <!-- Lightbox Overlay -->
+    <div id="lightbox" class="fixed inset-0 z-[200] hidden overflow-auto p-4 md:p-12 bg-black/95 backdrop-blur-xl cursor-zoom-out">
+        <button class="fixed top-8 right-8 text-white/50 hover:text-white transition-colors z-[210]">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <div class="min-h-full flex items-center justify-center w-full" id="lightbox-container">
+            <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl transition-all duration-300 scale-95 cursor-zoom-in">
+        </div>
+    </div>
+
     <script>
         // Navbar Scroll Effect
         const navbar = document.getElementById('navbar');
@@ -324,18 +254,48 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
-        });
 
-        function toggleModal(show) {
-            const modal = document.getElementById('contact-modal');
-            if (show) {
-                modal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            } else {
-                modal.classList.add('hidden');
+            // Lightbox Logic
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxContainer = document.getElementById('lightbox-container');
+            const images = document.querySelectorAll('main img');
+            let isZoomed = false;
+
+            images.forEach(img => {
+                img.classList.add('cursor-zoom-in');
+                img.addEventListener('click', () => {
+                    lightboxImg.src = img.src;
+                    lightbox.classList.remove('hidden');
+                    lightbox.classList.add('flex');
+                    isZoomed = false;
+                    lightboxImg.className = "max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl transition-all duration-300 scale-100 cursor-zoom-in";
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            lightboxImg.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (!isZoomed) {
+                    // Zoom In: Show full size
+                    lightboxImg.classList.remove('max-w-full', 'max-h-[90vh]', 'object-contain', 'cursor-zoom-in');
+                    lightboxImg.classList.add('w-auto', 'max-w-none', 'cursor-zoom-out');
+                    lightboxContainer.classList.remove('items-center');
+                    isZoomed = true;
+                } else {
+                    // Zoom Out: Back to fit screen
+                    lightboxImg.className = "max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl transition-all duration-300 scale-100 cursor-zoom-in";
+                    lightboxContainer.classList.add('items-center');
+                    isZoomed = false;
+                }
+            });
+
+            lightbox.addEventListener('click', () => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
                 document.body.style.overflow = 'auto';
-            }
-        }
+            });
+        });
     </script>
 </body>
 </html>
