@@ -43,7 +43,12 @@
         }
 
         #navbar.nav-scrolled .brand-name {
-            color: #E8172C;
+            color: white;
+        }
+
+        #navbar.nav-scrolled .brand-logo {
+            filter: none;
+            invert: 0;
         }
 
         #navbar.nav-scrolled .nav-link {
@@ -72,7 +77,7 @@
     <nav id="navbar" class="fixed top-0 left-1/2 -translate-x-1/2 z-50 bg-transparent px-6 py-4 md:px-12 border-b border-white/0 transition-all duration-300">
         <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
             <a href="index.html" class="brand-name flex items-center gap-3 text-lg font-bold tracking-wider uppercase transition-colors duration-300">
-                <img src="Vector.png" alt="Wordmark" class="h-[1.2em] w-auto object-contain brightness-0 invert">
+                <img src="Vector.png" alt="Wordmark" class="brand-logo h-[1.2em] w-auto object-contain brightness-0 invert">
                 <span>PABLO ELIAS</span>
             </a>
             <div class="hidden md:flex items-center space-x-12 text-sm font-light">
@@ -202,6 +207,29 @@
                         <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-2 transition-transform"></i>
                         Volver a Proyectos
                     </a>
+                </div>
+
+                <!-- More Projects -->
+                <div class="py-24 border-t border-white/5">
+                    <h3 class="text-[72px] font-light uppercase tracking-tighter leading-tight text-white text-center mb-16">AÚN QUEDAN COSAS <br> POR <span class="text-accent">EXPLORAR</span></h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <!-- Project: AguaLuz -->
+                        <a href="agualuz.html" class="group relative block h-[300px] rounded-[32px] overflow-hidden transition-all duration-500 hover:scale-[1.02]">
+                            <img src="assets/lemonth/proyectcard-lemoth.png" class="absolute inset-0 w-full h-full object-cover object-top">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all"></div>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <h3 class="text-2xl font-medium text-white uppercase tracking-tight">AGUALUZ</h3>
+                            </div>
+                        </a>
+                        <!-- Project: LeMonth -->
+                        <a href="lemonth.html" class="group relative block h-[300px] rounded-[32px] overflow-hidden transition-all duration-500 hover:scale-[1.02]">
+                            <img src="assets/lemonth/proyectcard-lemoth.png" class="absolute inset-0 w-full h-full object-cover object-top">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all"></div>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <h3 class="text-2xl font-medium text-white uppercase tracking-tight">LEMONTH</h3>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

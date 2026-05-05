@@ -384,10 +384,10 @@
             </div>
             <div class="project-grid">
                 <!-- Project 1: AguaLuz -->
-                <div class="project-card-wrapper">
+                <div class="project-card-wrapper project-card-fade transition-all duration-700 ease-out">
                     <a href="agualuz.html" class="group relative block w-[400px] h-[450px] rounded-[32px] overflow-hidden transition-all duration-500">
                         <!-- Fondo -->
-                        <img src="assets/lemonth/proyectcard-lemoth.png" alt="AguaLuz Background" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="assets/lemonth/proyectcard-lemoth.png" alt="Project Background" class="absolute inset-0 w-full h-full object-cover">
                         
                         <!-- Texto (Arriba Izquierda) -->
                         <div class="absolute top-8 left-8 z-20">
@@ -407,10 +407,10 @@
                     </a>
                 </div>
                 <!-- Project 2: LeMonth -->
-                <div class="project-card-wrapper">
+                <div class="project-card-wrapper project-card-fade transition-all duration-700 ease-out">
                     <a href="lemonth.html" class="group relative block w-[400px] h-[450px] rounded-[32px] overflow-hidden transition-all duration-500">
                         <!-- Fondo -->
-                        <img src="assets/lemonth/proyectcard-lemoth.png" alt="LeMonth Background" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="assets/lemonth/proyectcard-lemoth.png" alt="Project Background" class="absolute inset-0 w-full h-full object-cover">
                         
                         <!-- Texto (Arriba Izquierda) -->
                         <div class="absolute top-8 left-8 z-20">
@@ -430,10 +430,10 @@
                     </a>
                 </div>
                 <!-- Project 3: Fujita Quest -->
-                <div class="project-card-wrapper">
+                <div class="project-card-wrapper project-card-fade transition-all duration-700 ease-out">
                     <a href="fujita.html" class="group relative block w-[400px] h-[450px] rounded-[32px] overflow-hidden transition-all duration-500">
                         <!-- Fondo -->
-                        <img src="assets/lemonth/proyectcard-lemoth.png" alt="Fujita Quest Background" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="assets/lemonth/proyectcard-lemoth.png" alt="Project Background" class="absolute inset-0 w-full h-full object-cover">
                         
                         <!-- Texto (Arriba Izquierda) -->
                         <div class="absolute top-8 left-8 z-20">
@@ -751,6 +751,24 @@
             initExpand('toggle-lemonth', 'collapse-lemonth', 'lemonth-details');
             initCarousel('fujita-carousel', 'next-fujita');
             initExpand('toggle-fujita', 'collapse-fujita', 'fujita-details');
+
+            // Scroll Animation for Projects
+            const projectCards = document.querySelectorAll('.project-card-fade');
+            projectCards.forEach(card => card.classList.add('opacity-0', 'translate-y-10'));
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.remove('opacity-0', 'translate-y-10');
+                            entry.target.classList.add('opacity-100', 'translate-y-0');
+                        }, index * 200);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            projectCards.forEach(card => observer.observe(card));
         });
     </script>
 </body>
