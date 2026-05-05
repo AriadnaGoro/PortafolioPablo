@@ -14,10 +14,10 @@
             color: #FFFFFF;
             scroll-behavior: smooth;
         }
-        h1 { font-size: 48px; font-weight: 500; }
-        h2 { font-size: 80px; font-weight: 500; }
-        h3 { font-size: 32px; font-weight: 500; }
-        h4 { font-size: 28px; font-weight: 500; }
+        h1 { font-size: 48px; font-weight: 300; }
+        h2 { font-size: 72px; font-weight: 300; }
+        h3 { font-size: 32px; font-weight: 300; }
+        h4 { font-size: 28px; font-weight: 300; }
         
         .bg-accent { background-color: #E50914; }
         .text-accent { color: #E50914; }
@@ -64,17 +64,24 @@
             }
         }
     </style>
+    <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=e6be0d47"></script>
 </head>
 <body class="overflow-x-hidden bg-[#0d0f1a]">
 
     <!-- Navbar -->
     <nav id="navbar" class="fixed top-0 left-1/2 -translate-x-1/2 z-50 bg-transparent px-6 py-4 md:px-12 border-b border-white/0 transition-all duration-300">
         <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
-            <a href="index.html" class="brand-name text-lg font-medium tracking-wider uppercase transition-colors duration-300">PABLO ELIAS</a>
-            <div class="hidden md:flex items-center space-x-12 text-sm font-medium">
+            <a href="index.html" class="brand-name flex items-center gap-3 text-lg font-bold tracking-wider uppercase transition-colors duration-300">
+                <img src="Vector.png" alt="Wordmark" class="h-[1.2em] w-auto object-contain brightness-0 invert">
+                <span>PABLO ELIAS</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-12 text-sm font-light">
                 <a href="index.html#proyectos" class="nav-link hover:text-white transition text-white/60">Proyectos</a>
                 <a href="index.html#sobre-mi" class="nav-link hover:text-white transition text-white/60">Sobre mí</a>
-                <a href="index.html#contacto" class="nav-link border border-white/20 px-6 py-2 rounded-full hover:bg-white hover:text-black transition">Contacto</a>
+                <a href="index.html#contacto" class="nav-link border border-white/20 px-6 py-2 rounded-full hover:bg-white hover:text-black transition flex items-center gap-2 group/btn">
+                    <img src="Vector.png" alt="" class="h-[1.5em] w-0 opacity-0 group-hover/btn:w-6 group-hover/btn:opacity-100 transition-all duration-300 object-contain group-hover/btn:brightness-0">
+                    <span>Contacto</span>
+                </a>
             </div>
         </div>
     </nav>
@@ -87,11 +94,11 @@
                 <div class="space-y-6">
                     <div class="flex items-center gap-4">
                         <img src="assets/agualuz/logo.png" alt="AguaLuz Logo" class="w-16 h-16 object-contain">
-                        <span class="inline-block bg-accent/10 text-accent px-4 py-1 rounded-full text-xs font-medium uppercase tracking-wider">UI/UX Design</span>
+                        <span class="inline-block bg-accent/10 text-accent px-4 py-1 rounded-full text-xl font-light uppercase tracking-wider">UI/UX Design</span>
                     </div>
-                    <h1 class="text-7xl md:text-8xl font-medium text-white uppercase tracking-tighter leading-none">AGUALUZ</h1>
+                    <h1 class="text-[72px] font-light text-white uppercase tracking-tighter leading-none">AGUALUZ</h1>
                 </div>
-                <p class="text-white/60 text-xl max-w-md font-normal leading-relaxed">
+                <p class="text-white/60 text-base max-w-md font-normal leading-relaxed">
                     Sistema SaaS para la gestión operativa y administración de distribución de agua potable.
                 </p>
             </div>
@@ -101,17 +108,17 @@
                 <!-- DESCRIPCIÓN -->
                 <div class="flex flex-col md:flex-row items-center gap-16">
                     <div class="md:w-1/2 space-y-8">
-                        <h4 class="text-[56px] font-normal text-white uppercase tracking-tighter leading-tight">DESCRIPCIÓN DEL PROYECTO</h4>
-                        <p class="text-lg text-white/60 leading-relaxed font-normal">Empresa de distribución de bidones que gestionaba pedidos mediante WhatsApp, llamadas y registros manuales. No existía un sistema centralizado para administrar clientes, rutas ni conductores.</p>
+                        <h4 class="text-[72px] font-normal text-white uppercase tracking-tighter leading-tight">DESCRIPCIÓN DEL PROYECTO</h4>
+                        <p class="text-base text-white/60 leading-relaxed font-normal">Empresa de distribución de bidones que gestionaba pedidos mediante WhatsApp, llamadas y registros manuales. No existía un sistema centralizado para administrar clientes, rutas ni conductores.</p>
                     </div>
                     <div class="md:w-1/2"><img src="assets/agualuz/web.png" class="w-full rounded-3xl shadow-2xl"></div>
                 </div>
 
                 <!-- OBJETIVO -->
                 <div class="space-y-12">
-                    <h4 class="text-[56px] font-normal text-white uppercase tracking-tighter leading-tight">OBJETIVO</h4>
+                    <h4 class="text-[72px] font-normal text-white uppercase tracking-tighter leading-tight">OBJETIVO</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                        <p class="text-lg text-white/60 leading-relaxed font-normal">Diseñar desde cero un sistema que digitalizara y organizara la operación completa entre oficina y conductores.</p>
+                        <p class="text-base text-white/60 leading-relaxed font-normal">Diseñar desde cero un sistema que digitalizara y organizara la operación completa entre oficina y conductores.</p>
                         <div class="flex flex-col gap-4">
                             <img src="assets/agualuz/web.png" class="w-full rounded-2xl shadow-xl">
                             <p class="text-[10px] uppercase tracking-widest text-white/40 text-center font-normal">Visualización de la saas</p>
@@ -122,23 +129,23 @@
                 <!-- MI ROL -->
                 <div class="flex flex-col md:flex-row items-center gap-16">
                     <div class="md:w-1/2 space-y-8">
-                        <h4 class="text-[56px] font-normal text-white uppercase tracking-tighter leading-tight">MI ROL</h4>
-                        <p class="text-lg text-white/60 leading-relaxed font-normal">Lideré el diseño de UX/UI, definiendo la arquitectura del sistema, flujos principales y diseño de interfaz, trabajando en conjunto con desarrollo y el cliente durante las iteraciones.</p>
+                        <h4 class="text-[72px] font-normal text-white uppercase tracking-tighter leading-tight">MI ROL</h4>
+                        <p class="text-base text-white/60 leading-relaxed font-normal">Lideré el diseño de UX/UI, definiendo la arquitectura del sistema, flujos principales y diseño de interfaz, trabajando en conjunto con desarrollo y el cliente durante las iteraciones.</p>
                     </div>
                     <div class="md:w-1/2"><img src="assets/agualuz/mi-rol-full.png" class="w-full rounded-3xl shadow-2xl"></div>
                 </div>
 
                 <!-- ARQUITECTURA -->
                 <div class="space-y-12">
-                    <h4 class="text-[56px] font-normal text-white uppercase tracking-tighter leading-tight">ARQUITECTURA</h4>
-                    <p class="text-lg text-white/60 leading-relaxed max-w-3xl font-normal">Diseñé un mapa estructural previo que organizaba módulos, roles y flujos para asegurar escalabilidad y coherencia entre ambas plataformas.</p>
-                    <img src="assets/agualuz/arquitectura.png" class="w-full rounded-3xl shadow-2xl">
+                    <h4 class="text-[72px] font-normal text-white uppercase tracking-tighter leading-tight">ARQUITECTURA</h4>
+                    <p class="text-base text-white/60 leading-relaxed max-w-3xl font-normal">Diseñé un mapa estructural previo que organizaba módulos, roles y flujos para asegurar escalabilidad y coherencia entre ambas plataformas.</p>
+                    <img src="assets/agualuz/frame50.png" class="w-full rounded-3xl shadow-2xl">
                 </div>
 
                 <!-- PROBLEMA -->
                 <div class="space-y-12 border-t border-white/5 pt-20">
-                    <h4 class="text-[56px] font-normal text-white uppercase tracking-tighter leading-tight">PROBLEMA</h4>
-                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6 text-white/60 text-lg font-normal">
+                    <h4 class="text-[72px] font-normal text-white uppercase tracking-tighter leading-tight">PROBLEMA</h4>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6 text-white/60 text-base font-normal">
                         <li class="flex items-start space-x-3"><span class="text-[#E8172C]">•</span> <span>Pedidos manuales y desorganizados</span></li>
                         <li class="flex items-start space-x-3"><span class="text-[#E8172C]">•</span> <span>Falta de visibilidad sobre rutas y estados</span></li>
                         <li class="flex items-start space-x-3"><span class="text-[#E8172C]">•</span> <span>Sistema de registros de llamadas antiguo</span></li>
@@ -149,11 +156,11 @@
 
                 <!-- SOLUCIÓN -->
                 <div class="space-y-12 border-t border-white/5 pt-20">
-                    <h4 class="text-[56px] font-normal text-white uppercase tracking-tighter leading-tight">SOLUCIÓN</h4>
+                    <h4 class="text-[72px] font-normal text-white uppercase tracking-tighter leading-tight">SOLUCIÓN</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                         <div class="space-y-8">
                             <h5 class="text-2xl font-normal text-white uppercase">App Web (operadores)</h5>
-                            <p class="text-white/60 text-lg font-normal">Identificación automática de clientes, gestión de pedidos y visualización de conductores en mapa en tiempo real.</p>
+                            <p class="text-white/60 text-base font-normal">Identificación automática de clientes, gestión de pedidos y visualización de conductores en mapa en tiempo real.</p>
                             <div class="grid grid-cols-1 gap-6">
                                 <img src="assets/agualuz/web.png" class="w-full rounded-2xl shadow-xl">
                                 <img src="assets/agualuz/Creacion de rutas 3.png" class="w-full rounded-2xl shadow-xl">
@@ -161,7 +168,7 @@
                         </div>
                         <div class="space-y-8">
                             <h5 class="text-2xl font-normal text-white uppercase">App Móvil (conductores)</h5>
-                            <p class="text-white/60 text-lg font-normal">Actualización de estado de pedidos, carga de datos de clientes y canal de chat directo con la oficina.</p>
+                            <p class="text-white/60 text-base font-normal">Actualización de estado de pedidos, carga de datos de clientes y canal de chat directo con la oficina.</p>
                             <div class="grid grid-cols-2 gap-6">
                                 <img src="assets/agualuz/Pedidos.png" class="w-full rounded-2xl shadow-xl">
                                 <img src="assets/agualuz/Pedidos.jpg" class="w-full rounded-2xl shadow-xl">
@@ -172,74 +179,101 @@
 
                 <!-- ITERACIÓN -->
                 <div class="space-y-12 border-t border-white/5 pt-20">
-                    <h4 class="text-[56px] font-normal text-white uppercase tracking-tighter leading-tight">ITERACIÓN</h4>
+                    <h4 class="text-[72px] font-normal text-white uppercase tracking-tighter leading-tight">ITERACIÓN</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                        <p class="text-lg text-white/60 leading-relaxed font-normal">Probamos y ajustamos el flujo de creación de rutas para que fuera lo más automatizado posible, reduciendo el tiempo de despacho en un 40%.</p>
-                        <img src="assets/agualuz/automatización 1.png" class="w-full rounded-3xl shadow-2xl">
+                        <p class="text-base text-white/60 leading-relaxed font-normal">Probamos y ajustamos el flujo de creación de rutas para que fuera lo más automatizado posible, reduciendo el tiempo de despacho en un 40%.</p>
+                        <img src="assets/agualuz/main-content.png" class="w-full rounded-3xl shadow-2xl">
                     </div>
                 </div>
 
                 <!-- RESULTADO -->
                 <div class="space-y-12 border-t border-white/5 pt-20">
-                    <h4 class="text-[56px] font-normal text-white uppercase tracking-tighter leading-tight">RESULTADO</h4>
-                    <p class="text-lg text-white/60 leading-relaxed max-w-3xl font-normal">Se logró un sistema integral que no solo digitalizó la operación, sino que permitió a la empresa escalar su volumen de pedidos sin necesidad de contratar más personal administrativo.</p>
-                    <img src="assets/agualuz/screens2.png" class="w-full rounded-3xl shadow-2xl">
-                </div>
-
-                <!-- Siguiente Proyecto CTA -->
-                <div class="space-y-12 border-t border-white/5 pt-32">
-                    <div class="flex flex-col items-start text-left space-y-12">
-                        <div class="space-y-4">
-                            <span class="text-accent uppercase tracking-[0.3em] text-xs font-medium">Siguiente proyecto</span>
-                            <h2 class="text-5xl md:text-7xl font-medium uppercase tracking-tighter text-gradient leading-none">¿Ya viste estos proyectos?</h2>
-                        </div>
-                        
-                        <div class="w-full group">
-                            <a href="lemonth.html" class="block relative overflow-hidden rounded-[40px] bg-[#1a1d2e] p-10 md:p-16 transition-all duration-500 hover:scale-[1.01] shadow-2xl">
-                                <div class="flex flex-col md:flex-row items-center justify-between gap-12">
-                                    <div class="text-left space-y-4">
-                                        <h3 class="text-6xl md:text-7xl font-medium text-white uppercase tracking-tighter leading-none">LEMONTH</h3>
-                                        <p class="text-white/60 text-lg max-w-sm">Sitio de catálogo y venta para trailers food truck internacionales.</p>
-                                    </div>
-                                    <div class="relative w-full md:w-1/2 aspect-video rounded-3xl overflow-hidden shadow-xl">
-                                        <img src="assets/lemonth-card.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                                    </div>
-                                </div>
-                                <div class="absolute top-10 right-10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-10 group-hover:translate-x-0">
-                                    <div class="w-16 h-16 rounded-full bg-accent flex items-center justify-center">
-                                        <i data-lucide="arrow-right" class="text-white w-8 h-8"></i>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <a href="index.html#contacto" class="bg-white text-black px-12 py-5 rounded-full text-sm font-medium hover:scale-105 transition shadow-lg uppercase tracking-wider flex items-center gap-3">
-                            <i data-lucide="mail" class="w-5 h-5"></i>
-                            Hablemos
-                        </a>
-                    </div>
-                </div>
-
+                    <h4 class="text-[72px] font-normal text-white uppercase tracking-tighter leading-tight">RESULTADO</h4>
+                    <p class="text-base text-white/60 leading-relaxed max-w-3xl font-normal">Se logró un sistema integral que no solo digitalizó la operación, sino que permitió a la empresa escalar su volumen de pedidos sin necesidad de contratar más personal administrativo.</p>
                 <!-- Back Link -->
                 <div class="flex justify-center pt-24 pb-12">
-                    <a href="index.html#proyectos" class="group flex items-center gap-4 text-white/40 hover:text-white transition-all text-sm font-medium uppercase tracking-widest">
+                    <a href="index.html#proyectos" class="group flex items-center gap-4 text-white/40 hover:text-white transition-all text-sm font-light uppercase tracking-widest">
                         <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-2 transition-transform"></i>
-                        Volver a proyectos
+                        Volver a Proyectos
                     </a>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Lightbox Overlay -->
-    <div id="lightbox" class="fixed inset-0 z-[200] hidden overflow-auto p-4 md:p-12 bg-black/95 backdrop-blur-xl cursor-zoom-out">
-        <button class="fixed top-8 right-8 text-white/50 hover:text-white transition-colors z-[210]">
-            <i data-lucide="x" class="w-10 h-10"></i>
-        </button>
-        <div class="min-h-full flex items-center justify-center w-full" id="lightbox-container">
-            <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl transition-all duration-300 scale-95 cursor-zoom-in">
+    <!-- Footer Section -->
+    <footer class="bg-[#0a0a0a] border-t border-white/5 pt-24 pb-12 px-6 relative z-10">
+        <div class="max-w-[1512px] mx-auto">
+            <!-- Pre-footer CTA -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-24 gap-12">
+                <div class="max-w-4xl">
+                    <h2 class="text-[64px] md:text-[80px] font-light text-white uppercase tracking-tighter leading-none mb-6">
+                        ¿LISTO PARA CREAR <br> <span class="text-accent">ALGO INCREÍBLE?</span>
+                    </h2>
+                    <p class="text-white/40 text-xl font-normal max-w-xl">
+                        Hablemos sobre cómo mis decisiones de diseño pueden potenciar tu próximo producto digital.
+                    </p>
+                </div>
+                <a href="https://wa.me/5492996341746" target="_blank" class="bg-accent text-white px-12 py-6 rounded-full text-lg font-medium hover:scale-105 transition shadow-[0_20px_50px_rgba(229,9,20,0.2)] flex items-center gap-4 group">
+                    <span>Hablemos ahora</span>
+                    <i data-lucide="arrow-up-right" class="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 pb-24 border-b border-white/5">
+                <!-- Brand Column -->
+                <div class="space-y-8 col-span-1 lg:col-span-1">
+                    <a href="index.html" class="brand-name flex items-center gap-3 text-lg font-bold tracking-wider uppercase group">
+                        <img src="Vector.png" alt="Wordmark" class="brand-logo h-[1.2em] w-auto object-contain brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all">
+                        <span class="group-hover:text-accent transition-colors">PABLO ELIAS</span>
+                    </a>
+                    <p class="text-white/40 text-sm leading-relaxed max-w-xs font-normal">
+                        UI/UX Designer especializado en interfaces limpias y experiencias centradas en el usuario.
+                    </p>
+                </div>
+
+                <!-- Navigation Column -->
+                <div class="space-y-8">
+                    <h4 class="text-white/20 text-xs font-bold uppercase tracking-[0.2em]">Navegación</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html#proyectos" class="text-white/60 hover:text-white hover:translate-x-2 flex items-center gap-2 transition-all duration-300 font-normal">Proyectos</a></li>
+                        <li><a href="index.html#sobre-mi" class="text-white/60 hover:text-white hover:translate-x-2 flex items-center gap-2 transition-all duration-300 font-normal">Sobre mí</a></li>
+                        <li><a href="index.html#habilidades" class="text-white/60 hover:text-white hover:translate-x-2 flex items-center gap-2 transition-all duration-300 font-normal">Habilidades</a></li>
+                        <li><a href="index.html#contacto" class="text-white/60 hover:text-white hover:translate-x-2 flex items-center gap-2 transition-all duration-300 font-normal">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Column -->
+                <div class="space-y-8">
+                    <h4 class="text-white/20 text-xs font-bold uppercase tracking-[0.2em]">Redes</h4>
+                    <ul class="space-y-4">
+                        <li><a href="https://www.linkedin.com/in/pablo-elias-ramo-aab8211b4/" target="_blank" class="text-white/60 hover:text-white hover:translate-x-2 flex items-center gap-2 transition-all duration-300 font-normal"><i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="space-y-8">
+                    <h4 class="text-white/20 text-xs font-bold uppercase tracking-[0.2em]">Ubicación</h4>
+                    <div class="space-y-2">
+                        <p class="text-white/60 font-normal">La Plata, Argentina</p>
+                        <p class="text-white/40 text-sm font-normal">Disponible para el mundo</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-white/20 text-xs font-normal uppercase tracking-widest">
+                    © 2026 PABLO ELIAS. TODOS LOS DERECHOS RESERVADOS.
+                </p>
+                <div class="flex items-center gap-2 text-white/20 text-xs font-normal uppercase tracking-widest">
+                    <span>DISEÑADO CON</span>
+                    <i data-lucide="heart" class="w-3 h-3 text-accent fill-accent"></i>
+                    <span>POR PABLO ELIAS</span>
+                </div>
+            </div>
         </div>
-    </div>
+    </footer>
 
     <script>
         // Navbar Scroll Effect
@@ -252,48 +286,101 @@
             }
         });
 
+        // Global Zoom State
+        let currentZoom = 1;
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function setZoom(level) {
+            currentZoom = level;
+            updateZoom();
+        }
+
+        function updateZoom() {
+            lightboxImg.style.transform = `scale(${currentZoom})`;
+            
+            // Update UI
+            document.querySelectorAll('.zoom-btn').forEach(btn => {
+                btn.classList.remove('text-white', 'bg-white/10', 'rounded-lg');
+                btn.classList.add('text-white/60');
+            });
+            const activeBtn = document.getElementById(`zoom-${currentZoom}`);
+            activeBtn.classList.remove('text-white/60');
+            activeBtn.classList.add('text-white', 'bg-white/10', 'rounded-lg');
+
+            // Adjust container if zoomed
+            const container = document.getElementById('lightbox-container');
+            if (currentZoom > 1) {
+                container.classList.remove('items-center', 'justify-center');
+                container.classList.add('block');
+                lightboxImg.classList.remove('max-w-full', 'max-h-[90vh]');
+                lightboxImg.style.margin = 'auto';
+            } else {
+                container.classList.add('items-center', 'justify-center');
+                container.classList.remove('block');
+                lightboxImg.classList.add('max-w-full', 'max-h-[90vh]');
+                lightboxImg.style.margin = '0';
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
 
-            // Lightbox Logic
             const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            const lightboxContainer = document.getElementById('lightbox-container');
+            const container = document.getElementById('lightbox-container');
             const images = document.querySelectorAll('main img');
-            let isZoomed = false;
+            const closeBtn = document.getElementById('close-lightbox');
 
             images.forEach(img => {
+                if (img.id === 'lightbox-img') return;
                 img.classList.add('cursor-zoom-in');
                 img.addEventListener('click', () => {
                     lightboxImg.src = img.src;
                     lightbox.classList.remove('hidden');
                     lightbox.classList.add('flex');
-                    isZoomed = false;
-                    lightboxImg.className = "max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl transition-all duration-300 scale-100 cursor-zoom-in";
+                    setZoom(1);
                     document.body.style.overflow = 'hidden';
                 });
             });
 
-            lightboxImg.addEventListener('click', (e) => {
-                e.stopPropagation();
-                if (!isZoomed) {
-                    // Zoom In: Show full size
-                    lightboxImg.classList.remove('max-w-full', 'max-h-[90vh]', 'object-contain', 'cursor-zoom-in');
-                    lightboxImg.classList.add('w-auto', 'max-w-none', 'cursor-zoom-out');
-                    lightboxContainer.classList.remove('items-center');
-                    isZoomed = true;
-                } else {
-                    // Zoom Out: Back to fit screen
-                    lightboxImg.className = "max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl transition-all duration-300 scale-100 cursor-zoom-in";
-                    lightboxContainer.classList.add('items-center');
-                    isZoomed = false;
-                }
-            });
-
-            lightbox.addEventListener('click', () => {
+            closeBtn.addEventListener('click', () => {
                 lightbox.classList.add('hidden');
                 lightbox.classList.remove('flex');
                 document.body.style.overflow = 'auto';
+                lucide.createIcons();
+            });
+
+            // Close on background click (only if not clicking the image)
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox || e.target === container) {
+                    closeBtn.click();
+                }
+            });
+
+            // Drag functionality for zoomed images
+            let isDragging = false;
+            let startX, startY, scrollLeft, scrollTop;
+
+            container.addEventListener('mousedown', (e) => {
+                if (currentZoom === 1) return;
+                isDragging = true;
+                startX = e.pageX - container.offsetLeft;
+                startY = e.pageY - container.offsetTop;
+                scrollLeft = container.scrollLeft;
+                scrollTop = container.scrollTop;
+            });
+
+            container.addEventListener('mouseleave', () => { isDragging = false; });
+            container.addEventListener('mouseup', () => { isDragging = false; });
+
+            container.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+                const x = e.pageX - container.offsetLeft;
+                const y = e.pageY - container.offsetTop;
+                const walkX = (x - startX) * 2;
+                const walkY = (y - startY) * 2;
+                container.scrollLeft = scrollLeft - walkX;
+                container.scrollTop = scrollTop - walkY;
             });
         });
     </script>
