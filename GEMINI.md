@@ -11,7 +11,7 @@ Este archivo contiene el contexto y las directrices para el desarrollo y manteni
 ## 📁 Estructura del Proyecto
 - `index.html`: Archivo principal con la estructura y estilos.
 - `assets/`: Carpeta que contiene las imágenes del portafolio.
-  - `portafolio.png`: Captura de referencia original.
+  - `ágora/`: Iconos y recursos del proyecto Ágora.
   - `lemonth.png`, `Fujita-VerticalView.png`: Imágenes de proyectos.
   - `Foto perfil.png`, `hero.png`: Fotos personales.
 
